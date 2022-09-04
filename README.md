@@ -1,1 +1,3 @@
-# java-refactor-example
+# Introduction
+
+Examples for clean code and code refactoring using Java.
