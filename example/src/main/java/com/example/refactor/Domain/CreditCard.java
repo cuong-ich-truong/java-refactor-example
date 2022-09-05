@@ -19,4 +19,5 @@ public class CreditCard extends PaymentBaseMethod {
     public String getLastForDigits() {
         return this.number.substring(this.number.length() - 4);
     }
+
 }
