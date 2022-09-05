@@ -1,0 +1,41 @@
+Payment: Customer Allen Wu has made a payment with amount=23.43 on 2022-09-04T16:40:33.788377 using credit card
+Payment: Customer John Smith has made a payment with amount=121.12 on 2022-09-04T16:40:33.791880 using credit card
+Payment: Customer Allen Wu has made a payment with amount=23.43 on 2022-09-04T16:50:59.197134 using credit card
+Payment: Customer John Smith has made a payment with amount=121.12 on 2022-09-04T16:50:59.214555 using credit card
+Payment: Customer Allen Wu has made a payment with amount=23.43 on 2022-09-04T16:51:11.915879 using credit card
+Payment: Customer John Smith has made a payment with amount=121.12 on 2022-09-04T16:51:11.928440 using credit card
+Payment: Invoice INV1662285071928 has been collected
+Payment: Customer Allen Wu has made a payment with amount=23.43 on 2022-09-04T16:51:16.408232 using credit card
+Payment: Invoice INV1662285076408 has been collected
+Payment: Customer John Smith has made a payment with amount=121.12 on 2022-09-04T16:51:16.419774 using credit card
+Payment: Invoice INV1662285076419 has been collected
+Payment: Customer Allen Wu has made a payment with amount=23.43 on 2022-09-04T16:51:49.593493 using credit card
+Payment: Invoice INV1662285109593 has been collected
+Payment: Customer John Smith has made a payment with amount=121.12 on 2022-09-04T16:51:49.604946 using credit card
+Payment: Invoice INV1662285109604 has been collected
+Payment: Customer Allen Wu has made a payment with amount=23.43 on 2022-09-04T16:52:35.543988 using credit card
+Payment: Invoice INV1662285155544 has been collected.
+Payment: Customer John Smith has made a payment with amount=121.12 on 2022-09-04T16:52:35.555723 using credit card
+Payment: Invoice INV1662285155555 has not been collected
+Payment: Customer Allen Wu has made a payment with amount=23.43 on 2022-09-04T16:55:20.086690 using credit card
+Payment: Invoice INV1662285320086 - Collected amount of 23.43
+Payment: Customer John Smith has made a payment with amount=121.12 on 2022-09-04T16:55:20.097974 using credit card
+Payment: Invoice INV1662285320098 - Cannot collected amount of 121.12
+Payment: Customer Allen Wu has made a payment with amount=23.43 on 2022-09-04T17:00:12.380958 using credit card
+Payment: Invoice INV1662285612381 - Collected amount of 23.43
+Payment: Customer John Smith has made a payment with amount=121.12 on 2022-09-04T17:00:12.392594 using credit card
+Payment: Invoice INV1662285612392 - Cannot collect amount of 121.12
+Payment: Customer Allen Wu has made a payment with amount=23.43 on 2022-09-04T17:12:59.947579 using credit card
+Payment: Invoice INV1662286379947 - Collected amount of 23.43
+Payment: Customer John Smith has made a payment with amount=121.12 on 2022-09-04T17:12:59.962752 using credit card
+Payment: Invoice INV1662286379962 - Cannot collect amount of 121.12
+Payment: Customer Bob Code has made a payment with amount=15.56 on 2022-09-04T17:12:59.963727 using Paypal
+Payment: Invoice INV1662286379963 - Collected amount of 15.56
+Payment: Customer Allen Wu has made a payment with amount=23.43 on 2022-09-04T17:14:31.427036 using credit card
+Payment: Invoice INV1662286471427 - Collected amount of 23.43
+Payment: Customer John Smith has made a payment with amount=121.12 on 2022-09-04T17:14:31.438347 using credit card
+Payment: Invoice INV1662286471438 - Cannot collect amount of 121.12
+Payment: Customer Bob Code has made a payment with amount=15.56 on 2022-09-04T17:14:31.439435 using Paypal
+Payment: Invoice INV1662286471439 - Collected amount of 15.56
+Payment: Customer Jason Tao has made a payment with amount=15.56 on 2022-09-04T17:14:31.440161 using Paypal
+Payment: Invoice INV1662286471440 - Cannot collect amount of 15.56

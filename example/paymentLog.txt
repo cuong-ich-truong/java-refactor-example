@@ -1,0 +1,92 @@
+Payment: Customer John Smith has made a payment with amount=121.12 on 2022-09-04T17:29:40.888096 using credit card
+Payment: Invoice INV1662287380888 - Cannot collect amount of 121.12
+Payment: Customer Jason Tao has made a payment with amount=15.56 on 2022-09-04T17:29:40.911992 using Paypal
+Payment: Invoice INV1662287380912 - Cannot collect amount of 15.56
+Payment: Customer Bob Code has made a payment with amount=15.56 on 2022-09-04T17:29:40.913688 using Paypal
+Payment: Invoice INV1662287380913 - Collected amount of 15.56
+Payment: Customer Allen Wu has made a payment with amount=23.43 on 2022-09-04T17:29:40.914848 using credit card
+Payment: Invoice INV1662287380914 - Collected amount of 23.43
+Payment: Customer Dexter Fin has made a payment with amount=15.56 on 2022-09-04T17:30:52.294073 using ApplePay
+Payment: Invoice INV1662287452294 - Collected amount of 15.56
+Payment: Customer John Smith has made a payment with amount=121.12 on 2022-09-04T17:30:52.303851 using credit card
+Payment: Invoice INV1662287452303 - Cannot collect amount of 121.12
+Payment: Customer Jason Tao has made a payment with amount=15.56 on 2022-09-04T17:30:52.304828 using Paypal
+Payment: Invoice INV1662287452304 - Cannot collect amount of 15.56
+Payment: Customer Bob Code has made a payment with amount=15.56 on 2022-09-04T17:30:52.305741 using Paypal
+Payment: Invoice INV1662287452305 - Collected amount of 15.56
+Payment: Customer Allen Wu has made a payment with amount=23.43 on 2022-09-04T17:30:52.306696 using credit card
+Payment: Invoice INV1662287452306 - Collected amount of 23.43
+Payment: Customer Dexter Fin has made a payment with amount=15.56 on 2022-09-04T17:30:52.307447 using ApplePay
+Payment: Invoice INV1662287452307 - Cannot collect amount of 15.56
+Payment: Customer Dexter Fin has made a payment with amount=15.56 on 2022-09-04T17:47:08.923781 using ApplePay
+Payment: Invoice INV1662288428923 - Collected amount of 15.56
+Payment: Customer John Smith has made a payment with amount=121.12 on 2022-09-04T17:47:08.932509 using credit card
+Payment: Invoice INV1662288428932 - Cannot collect amount of 121.12
+Payment: Customer Jason Tao has made a payment with amount=15.56 on 2022-09-04T17:47:08.935045 using Paypal
+Payment: Invoice INV1662288428935 - Cannot collect amount of 15.56
+Payment: Customer Bob Code has made a payment with amount=15.56 on 2022-09-04T17:47:08.935936 using Paypal
+Payment: Invoice INV1662288428935 - Collected amount of 15.56
+Payment: Customer Allen Wu has made a payment with amount=23.43 on 2022-09-04T17:47:08.936653 using credit card
+Payment: Invoice INV1662288428936 - Collected amount of 23.43
+Payment: Customer Dexter Fin has made a payment with amount=15.56 on 2022-09-04T17:47:08.937311 using ApplePay
+Payment: Invoice INV1662288428937 - Cannot collect amount of 15.56
+Payment: Customer Bob Code has made a payment with amount=15.56 on 2022-09-04T17:47:48.346642 using Paypal
+Payment: Invoice INV1662288468346 - Collected amount of 15.56
+Payment: Customer Jason Tao has made a payment with amount=15.56 on 2022-09-04T17:47:48.354737 using Paypal
+Payment: Invoice INV1662288468354 - Cannot collect amount of 15.56
+Payment: Customer John Smith has made a payment with amount=121.12 on 2022-09-04T17:47:48.356729 using credit card
+Payment: Invoice INV1662288468356 - Cannot collect amount of 121.12
+Payment: Customer Dexter Fin has made a payment with amount=15.56 on 2022-09-04T17:47:48.358137 using ApplePay
+Payment: Invoice INV1662288468358 - Collected amount of 15.56
+Payment: Customer Dexter Fin has made a payment with amount=15.56 on 2022-09-04T17:47:48.359293 using ApplePay
+Payment: Invoice INV1662288468359 - Cannot collect amount of 15.56
+Payment: Customer Allen Wu has made a payment with amount=23.43 on 2022-09-04T17:47:48.360260 using credit card
+Payment: Invoice INV1662288468360 - Collected amount of 23.43
+Payment: Customer Allen Wu has made a payment with amount=23.43 on 2022-09-04T17:50:29.189644 using credit card
+Payment: Invoice INV1662288629189 - Collected amount of 23.43
+Payment: Customer Bob Code has made a payment with amount=15.56 on 2022-09-04T17:50:29.198474 using Paypal
+Payment: Invoice INV1662288629198 - Collected amount of 15.56
+Payment: Customer Jason Tao has made a payment with amount=15.56 on 2022-09-04T17:50:29.200658 using Paypal
+Payment: Invoice INV1662288629200 - Cannot collect amount of 15.56
+Payment: Customer John Smith has made a payment with amount=121.12 on 2022-09-04T17:50:29.203263 using credit card
+Payment: Invoice INV1662288629203 - Cannot collect amount of 121.12
+Payment: Customer Dexter Fin has made a payment with amount=15.56 on 2022-09-04T17:50:29.206407 using ApplePay
+Payment: Invoice INV1662288629206 - Collected amount of 15.56
+Payment: Customer Dexter Fin has made a payment with amount=15.56 on 2022-09-04T17:50:29.210507 using ApplePay
+Payment: Invoice INV1662288629210 - Cannot collect amount of 15.56
+Payment: Customer Allen Wu has made a payment with amount=23.43 on 2022-09-04T17:50:29.216592 using credit card
+Payment: Invoice INV1662288629216 - Collected amount of 23.43
+Payment: Customer Allen Wu has made a payment with amount=23.43 on 2022-09-04T17:51:23.145758 using credit card
+Payment: Invoice INV1662288683145 - Collected amount of 23.43
+Payment: Customer Bob Code has made a payment with amount=15.56 on 2022-09-04T17:51:23.154196 using Paypal
+Payment: Invoice INV1662288683154 - Collected amount of 15.56
+Payment: Customer Bob Code has made a payment with amount=15.56 on 2022-09-04T17:51:23.155268 using Paypal
+Payment: Invoice INV1662288683155 - Collected amount of 15.56
+Payment: Customer Jason Tao has made a payment with amount=15.56 on 2022-09-04T17:51:23.156331 using Paypal
+Payment: Invoice INV1662288683156 - Cannot collect amount of 15.56
+Payment: Customer John Smith has made a payment with amount=121.12 on 2022-09-04T17:51:23.157222 using credit card
+Payment: Invoice INV1662288683157 - Cannot collect amount of 121.12
+Payment: Customer Dexter Fin has made a payment with amount=15.56 on 2022-09-04T17:51:23.158494 using ApplePay
+Payment: Invoice INV1662288683158 - Collected amount of 15.56
+Payment: Customer Dexter Fin has made a payment with amount=15.56 on 2022-09-04T17:51:23.159421 using ApplePay
+Payment: Invoice INV1662288683159 - Cannot collect amount of 15.56
+Payment: Customer Allen Wu has made a payment with amount=23.43 on 2022-09-04T17:51:23.160316 using credit card
+Payment: Invoice INV1662288683160 - Collected amount of 23.43
+Payment: Customer Bob Code has made a payment with amount=15.56 on 2022-09-04T17:52:21.829059 using Paypal
+Payment: Invoice INV1662288741829 - Collected amount of 15.56
+Payment: Customer Bob Code has made a payment with amount=15.56 on 2022-09-04T17:52:21.837345 using Paypal
+Payment: Invoice INV1662288741837 - Collected amount of 15.56
+Payment: Customer Allen Wu has made a payment with amount=23.43 on 2022-09-04T17:52:21.838755 using credit card
+Payment: Invoice INV1662288741838 - Collected amount of 23.43
+Payment: Customer Jason Tao has made a payment with amount=15.56 on 2022-09-04T17:52:21.839833 using Paypal
+Payment: Invoice INV1662288741839 - Cannot collect amount of 15.56
+Payment: Customer John Smith has made a payment with amount=121.12 on 2022-09-04T17:52:21.840897 using credit card
+Payment: Invoice INV1662288741840 - Cannot collect amount of 121.12
+Payment: Customer Dexter Fin has made a payment with amount=15.56 on 2022-09-04T17:52:21.842988 using ApplePay
+Payment: Invoice INV1662288741843 - Collected amount of 15.56
+Payment: Customer Dexter Fin has made a payment with amount=15.56 on 2022-09-04T17:52:21.844885 using ApplePay
+Payment: Invoice INV1662288741844 - Collected amount of 15.56
+Payment: Customer Dexter Fin has made a payment with amount=15.56 on 2022-09-04T17:52:21.847154 using ApplePay
+Payment: Invoice INV1662288741847 - Cannot collect amount of 15.56
+Payment: Customer Allen Wu has made a payment with amount=23.43 on 2022-09-04T17:52:21.848629 using credit card
+Payment: Invoice INV1662288741848 - Collected amount of 23.43
