@@ -1,17 +1,22 @@
 package com.example.refactor;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
 
 public class PayPalAccount {
     private String email;
     private final String password;
+    private BigDecimal balance;
     private boolean signedIn;
 
+    public boolean isSignedIn() {
+        return signedIn;
+    }
+
     public PayPalAccount(String email) {
-        this.email = email;
+        this.balance = BigDecimal.valueOf(100.00);
         password = "correct password";
         signedIn = false;
+        this.email = email;
     }
 
     public void signIn(String password) {
@@ -22,19 +27,17 @@ public class PayPalAccount {
         }
     }
 
-    public Invoice pay(String customerName, BigDecimal amount) {
-        if (signedIn) {
-            Invoice invoice = new Invoice(customerName, this.email, amount,
-                    LocalDateTime.now().toString());
-            invoice.setPaid(true);
+    public boolean deductAmount(BigDecimal amount) {
+        if (!signedIn) {
+            return false;
+        }
 
-            return invoice;
+        BigDecimal newBalance = this.balance.subtract(amount);
+        if (newBalance.compareTo(BigDecimal.ZERO) >= 0) {
+            this.balance = newBalance;
+            return true;
         } else {
-            Invoice invoice = new Invoice(customerName, this.email, amount,
-                    LocalDateTime.now().toString());
-            invoice.setPaid(false);
-
-            return invoice;
+            return false;
         }
     }
 }

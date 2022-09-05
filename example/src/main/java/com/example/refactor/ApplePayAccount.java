@@ -1,19 +1,20 @@
 package com.example.refactor;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
 
 public class ApplePayAccount {
     private String email;
     private String appleId;
     private final String password;
+    private BigDecimal balance;
     private boolean signedIn;
 
     public ApplePayAccount(String email, String appleId) {
-        this.email = email;
-        this.appleId = appleId;
         this.password = "strong password";
         this.signedIn = false;
+        this.balance = BigDecimal.valueOf(100.00);
+        this.email = email;
+        this.appleId = appleId;
     }
 
     public void signIn(String password) {
@@ -24,19 +25,17 @@ public class ApplePayAccount {
         }
     }
 
-    public Invoice pay(String customerName, BigDecimal amount) {
-        if (signedIn) {
-            Invoice invoice = new Invoice(customerName, email, this.appleId, amount,
-                    LocalDateTime.now().toString());
-            invoice.setPaid(true);
+    public boolean deductAmount(BigDecimal amount) {
+        if (!signedIn) {
+            return false;
+        }
 
-            return invoice;
+        BigDecimal newBalance = this.balance.subtract(amount);
+        if (newBalance.compareTo(BigDecimal.ZERO) >= 0) {
+            this.balance = newBalance;
+            return true;
         } else {
-            Invoice invoice = new Invoice(customerName, email, this.appleId, amount,
-                    LocalDateTime.now().toString());
-            invoice.setPaid(false);
-
-            return invoice;
+            return false;
         }
     }
 }

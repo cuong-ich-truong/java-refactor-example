@@ -25,7 +25,7 @@ public class Invoice {
         return isPaid;
     }
 
-    public void setPaid(boolean isPaid) {
+    public void setIsPaid(boolean isPaid) {
         this.isPaid = isPaid;
     }
 

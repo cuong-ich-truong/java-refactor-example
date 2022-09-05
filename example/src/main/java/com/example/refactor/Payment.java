@@ -6,6 +6,7 @@ import java.math.BigDecimal;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+import java.time.LocalDateTime;
 
 public class Payment {
     public Invoice pay(BigDecimal amount,
@@ -22,7 +23,10 @@ public class Payment {
 
         if (payMethod == PaymentMethod.CREDIT_CARD) {
             CreditCard creditCard = new CreditCard(cardNumber, cardDate, cardCvv);
-            invoice = creditCard.processPayment(customerName, amount);
+            boolean result = creditCard.deductAmount(amount);
+            invoice = new Invoice(customerName, amount, creditCard.getLastForDigits(),
+                    LocalDateTime.now().toString());
+            invoice.setIsPaid(result);
             String historyRecord = "Payment: " + "Customer " + invoice.getCustomerName()
                     + " has made a payment with amount="
                     + invoice.getAmount() + " on " + invoice.getPaymentDate() + " using credit card" + "\r\n";
@@ -55,7 +59,11 @@ public class Payment {
         } else if (payMethod == PaymentMethod.PAYPAL) {
             PayPalAccount payPalAccount = new PayPalAccount(customerEmail);
             payPalAccount.signIn(paypalPassword);
-            invoice = payPalAccount.pay(customerName, amount);
+            boolean result = payPalAccount.deductAmount(amount);
+            invoice = new Invoice(customerName, customerEmail, amount,
+                    LocalDateTime.now().toString());
+            invoice.setIsPaid(result);
+
             String historyRecord = "Payment: " + "Customer " + invoice.getCustomerName()
                     + " has made a payment with amount="
                     + invoice.getAmount() + " on " + invoice.getPaymentDate() + " using Paypal" + "\r\n";
@@ -88,7 +96,11 @@ public class Payment {
         } else if (payMethod == PaymentMethod.APPLE_PAY) {
             ApplePayAccount applePayAccount = new ApplePayAccount(customerEmail, appleId);
             applePayAccount.signIn(applePayPassword);
-            invoice = applePayAccount.pay(customerName, amount);
+            boolean result = applePayAccount.deductAmount(amount);
+            invoice = new Invoice(customerName, customerEmail, appleId, amount,
+                    LocalDateTime.now().toString());
+            invoice.setIsPaid(result);
+
             String historyRecord = "Payment: " + "Customer " + invoice.getCustomerName()
                     + " has made a payment with amount="
                     + invoice.getAmount() + " on " + invoice.getPaymentDate() + " using ApplePay" + "\r\n";
