@@ -1,26 +1,16 @@
-package com.example.refactor;
+package com.example.refactor.Domain;
 
 import java.math.BigDecimal;
 
-/**
- * Dummy credit card.
- */
-public class CreditCard {
-    private String number;
+public abstract class PaymentBaseMethod {
     private BigDecimal balance;
 
     public BigDecimal getBalance() {
         return balance;
     }
 
-    private String date;
-    private String cvv;
-
-    CreditCard(String number, String date, String cvv) {
+    public PaymentBaseMethod() {
         this.balance = BigDecimal.valueOf(100.00);
-        this.number = number;
-        this.date = date;
-        this.cvv = cvv;
     }
 
     public boolean deductAmount(BigDecimal amount) {
@@ -31,9 +21,5 @@ public class CreditCard {
         } else {
             return false;
         }
-    }
-
-    public String getLastForDigits() {
-        return this.number.substring(this.number.length() - 4);
     }
 }

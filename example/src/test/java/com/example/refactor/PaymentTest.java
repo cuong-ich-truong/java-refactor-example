@@ -7,6 +7,10 @@ import java.math.BigDecimal;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.example.refactor.Domain.ApplePayAccount;
+import com.example.refactor.Domain.CreditCard;
+import com.example.refactor.Domain.PayPalAccount;
+
 /**
  * Unit test for the Payment class.
  */

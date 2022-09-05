@@ -1,5 +1,9 @@
 package com.example.refactor;
 
+import com.example.refactor.Domain.ApplePayAccount;
+import com.example.refactor.Domain.CreditCard;
+import com.example.refactor.Domain.PayPalAccount;
+
 public class Customer {
     private String name;
 

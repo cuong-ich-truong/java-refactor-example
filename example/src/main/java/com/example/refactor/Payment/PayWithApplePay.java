@@ -1,4 +1,4 @@
-package com.example.refactor;
+package com.example.refactor.Payment;
 
 import java.io.File;
 import java.io.IOException;
@@ -7,7 +7,9 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.time.LocalDateTime;
-import com.example.refactor.Payment.PaymentStrategy;
+
+import com.example.refactor.Customer;
+import com.example.refactor.Invoice;
 
 public class PayWithApplePay implements PaymentStrategy {
 

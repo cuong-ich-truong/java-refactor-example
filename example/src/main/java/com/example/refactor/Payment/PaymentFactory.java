@@ -1,6 +1,5 @@
 package com.example.refactor.Payment;
 
-import com.example.refactor.PayWithApplePay;
 import com.example.refactor.PaymentMethod;
 
 public class PaymentFactory {
