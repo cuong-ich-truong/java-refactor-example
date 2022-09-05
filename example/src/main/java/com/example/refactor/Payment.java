@@ -10,26 +10,19 @@ import java.time.LocalDateTime;
 
 public class Payment {
     public Invoice pay(BigDecimal amount,
-            String customerName,
-            String customerEmail,
-            String paypalPassword,
-            String cardNumber,
-            String cardDate,
-            String cardCvv,
-            String appleId,
-            String applePayPassword,
+            Customer customer,
             PaymentMethod payMethod) {
         Invoice invoice = null;
 
         switch (payMethod) {
             case CREDIT_CARD:
-                invoice = payByCreditCard(amount, customerName, cardNumber, cardDate, cardCvv);
+                invoice = payByCreditCard(amount, customer);
                 return invoice;
             case PAYPAL:
-                invoice = payByPayPal(amount, customerName, customerEmail, paypalPassword);
+                invoice = payByPayPal(amount, customer);
                 return invoice;
             case APPLE_PAY:
-                invoice = payByApplePay(amount, customerName, customerEmail, appleId, applePayPassword);
+                invoice = payByApplePay(amount, customer);
                 return invoice;
             default:
                 throw new IllegalArgumentException("Unsupported payment method");
@@ -37,13 +30,12 @@ public class Payment {
 
     }
 
-    private Invoice payByApplePay(BigDecimal amount, String customerName, String customerEmail, String appleId,
-            String applePayPassword) {
+    private Invoice payByApplePay(BigDecimal amount, Customer customer) {
         Invoice invoice;
-        ApplePayAccount applePayAccount = new ApplePayAccount(customerEmail, appleId);
-        applePayAccount.signIn(applePayPassword);
-        boolean result = applePayAccount.deductAmount(amount);
-        invoice = new Invoice(customerName, customerEmail, appleId, amount,
+        customer.getApplePayAccount().signIn();
+        boolean result = customer.getApplePayAccount().deductAmount(amount);
+        invoice = new Invoice(customer.getName(), customer.getEmail(), customer.getApplePayAccount().getAppleId(),
+                amount,
                 LocalDateTime.now().toString());
         invoice.setIsPaid(result);
 
@@ -76,12 +68,11 @@ public class Payment {
         return invoice;
     }
 
-    private Invoice payByPayPal(BigDecimal amount, String customerName, String customerEmail, String paypalPassword) {
+    private Invoice payByPayPal(BigDecimal amount, Customer customer) {
         Invoice invoice;
-        PayPalAccount payPalAccount = new PayPalAccount(customerEmail);
-        payPalAccount.signIn(paypalPassword);
-        boolean result = payPalAccount.deductAmount(amount);
-        invoice = new Invoice(customerName, customerEmail, amount,
+        customer.getPayPalAccount().signIn();
+        boolean result = customer.getPayPalAccount().deductAmount(amount);
+        invoice = new Invoice(customer.getName(), customer.getEmail(), amount,
                 LocalDateTime.now().toString());
         invoice.setIsPaid(result);
 
@@ -114,12 +105,10 @@ public class Payment {
         return invoice;
     }
 
-    private Invoice payByCreditCard(BigDecimal amount, String customerName, String cardNumber, String cardDate,
-            String cardCvv) {
+    private Invoice payByCreditCard(BigDecimal amount, Customer customer) {
         Invoice invoice;
-        CreditCard creditCard = new CreditCard(cardNumber, cardDate, cardCvv);
-        boolean result = creditCard.deductAmount(amount);
-        invoice = new Invoice(customerName, amount, creditCard.getLastForDigits(),
+        boolean result = customer.getCreditCard().deductAmount(amount);
+        invoice = new Invoice(customer.getName(), amount, customer.getCreditCard().getLastForDigits(),
                 LocalDateTime.now().toString());
         invoice.setIsPaid(result);
         String historyRecord = "Payment: " + "Customer " + invoice.getCustomerName()

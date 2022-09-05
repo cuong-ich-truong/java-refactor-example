@@ -3,8 +3,9 @@ package com.example.refactor;
 import java.math.BigDecimal;
 
 public class PayPalAccount {
+    private final String PASSWORD = "paypal password";
     private String email;
-    private final String password;
+    private String password;
     private BigDecimal balance;
     private boolean signedIn;
 
@@ -12,15 +13,16 @@ public class PayPalAccount {
         return signedIn;
     }
 
-    public PayPalAccount(String email) {
+    public PayPalAccount(String email, String password) {
         this.balance = BigDecimal.valueOf(100.00);
-        password = "correct password";
+
         signedIn = false;
         this.email = email;
+        this.password = password;
     }
 
-    public void signIn(String password) {
-        if (password == this.password) {
+    public void signIn() {
+        if (PASSWORD == this.password) {
             signedIn = true;
         } else {
             signedIn = false;
