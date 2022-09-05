@@ -88,7 +88,7 @@ public class Payment {
         } else if (payMethod == PaymentMethod.APPLE_PAY) {
             ApplePayAccount applePayAccount = new ApplePayAccount(customerEmail, appleId);
             applePayAccount.signIn(applePayPassword);
-            invoice = applePayAccount.pay(amount);
+            invoice = applePayAccount.pay(customerName, amount);
             String historyRecord = "Payment: " + "Customer " + invoice.getCustomerName()
                     + " has made a payment with amount="
                     + invoice.getAmount() + " on " + invoice.getPaymentDate() + " using ApplePay" + "\r\n";

@@ -24,15 +24,15 @@ public class ApplePayAccount {
         }
     }
 
-    public Invoice pay(BigDecimal amount) {
+    public Invoice pay(String customerName, BigDecimal amount) {
         if (signedIn) {
-            Invoice invoice = new Invoice(email, this.appleId, amount,
+            Invoice invoice = new Invoice(customerName, email, this.appleId, amount,
                     LocalDateTime.now().toString());
             invoice.setPaid(true);
 
             return invoice;
         } else {
-            Invoice invoice = new Invoice(email, this.appleId, amount,
+            Invoice invoice = new Invoice(customerName, email, this.appleId, amount,
                     LocalDateTime.now().toString());
             invoice.setPaid(false);
 
