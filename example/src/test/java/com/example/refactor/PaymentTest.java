@@ -12,14 +12,14 @@ import org.junit.Test;
  */
 public class PaymentTest {
 
-        private Payment payMethod;
+        private PaymentService paymentService;
         private Customer customerWithCc;
         private Customer customerWithPp;
         private Customer customerWithAp;
 
         @Before
         public void setUp() {
-                payMethod = new Payment();
+                paymentService = new PaymentService();
                 customerWithCc = new Customer("John Smith", "john.smith@example.com",
                                 new CreditCard("1234", "12/22", "123"));
 
@@ -33,7 +33,7 @@ public class PaymentTest {
         @Test
         public void creditCard_ShouldCreateInvoice_WithCorrectMethod() {
 
-                Invoice invoice = payMethod.pay(BigDecimal.valueOf(23.43), customerWithCc,
+                Invoice invoice = paymentService.pay(BigDecimal.valueOf(23.43), customerWithCc,
                                 PaymentMethod.CREDIT_CARD);
 
                 assertEquals("should create invoice with correct payment method", PaymentMethod.CREDIT_CARD,
@@ -42,7 +42,7 @@ public class PaymentTest {
 
         @Test
         public void creditCard_ShouldCreatePaidInvoice_withAmountBelowCardLimit() {
-                Payment payMethod = new Payment();
+                PaymentService payMethod = new PaymentService();
 
                 Invoice invoice = payMethod.pay(BigDecimal.valueOf(23.43), customerWithCc,
                                 PaymentMethod.CREDIT_CARD);
@@ -53,7 +53,7 @@ public class PaymentTest {
 
         @Test
         public void creditCard_shouldUnpaidInvoice_WhenAmountOverLimit() {
-                Payment payMethod = new Payment();
+                PaymentService payMethod = new PaymentService();
 
                 Invoice invoice = payMethod.pay(BigDecimal.valueOf(121.12), customerWithCc,
                                 PaymentMethod.CREDIT_CARD);
@@ -64,7 +64,7 @@ public class PaymentTest {
         @Test
         public void payPal_ShouldCreateInvoice_WithCorrectMethod() {
 
-                Invoice invoice = payMethod.pay(BigDecimal.valueOf(15.56), customerWithPp,
+                Invoice invoice = paymentService.pay(BigDecimal.valueOf(15.56), customerWithPp,
                                 PaymentMethod.PAYPAL);
 
                 assertEquals("should create invoice with correct payment method", PaymentMethod.PAYPAL,
@@ -74,7 +74,7 @@ public class PaymentTest {
         @Test
         public void payPal_ShouldCreatePaidInvoice_withValidPaypalPassword() {
 
-                Invoice invoice = payMethod.pay(BigDecimal.valueOf(15.56), customerWithPp,
+                Invoice invoice = paymentService.pay(BigDecimal.valueOf(15.56), customerWithPp,
                                 PaymentMethod.PAYPAL);
 
                 assertEquals("should create invoice with correct status", "paid", invoice.Status());
@@ -85,7 +85,7 @@ public class PaymentTest {
                 customerWithPp = new Customer("Allen Smith", "Allen.smith@example.com",
                                 new PayPalAccount("john.smith@example.com", "wrong password"));
 
-                Invoice invoice = payMethod.pay(BigDecimal.valueOf(15.56), customerWithPp,
+                Invoice invoice = paymentService.pay(BigDecimal.valueOf(15.56), customerWithPp,
                                 PaymentMethod.PAYPAL);
 
                 assertEquals("should create invoice with correct status", "unpaid", invoice.Status());
@@ -94,7 +94,7 @@ public class PaymentTest {
         @Test
         public void applePay_ShouldCreatePaidInvoice_WithCorrectMethod() {
 
-                Invoice invoice = payMethod.pay(BigDecimal.valueOf(15.56), customerWithAp,
+                Invoice invoice = paymentService.pay(BigDecimal.valueOf(15.56), customerWithAp,
                                 PaymentMethod.APPLE_PAY);
 
                 assertEquals("should create invoice with correct payment method", PaymentMethod.APPLE_PAY,
@@ -104,7 +104,7 @@ public class PaymentTest {
         @Test
         public void applePay_ShouldCreatePaidInvoice_withValidApplePassword() {
 
-                Invoice invoice = payMethod.pay(BigDecimal.valueOf(15.56), customerWithAp,
+                Invoice invoice = paymentService.pay(BigDecimal.valueOf(15.56), customerWithAp,
                                 PaymentMethod.APPLE_PAY);
 
                 assertEquals("should create invoice with correct status", "paid", invoice.Status());
@@ -115,7 +115,7 @@ public class PaymentTest {
                 customerWithAp = new Customer("Tony Smith", "tony.smith@example.com",
                                 new ApplePayAccount("john.smith@example.com", "123", "wrong password"));
 
-                Invoice invoice = payMethod.pay(BigDecimal.valueOf(15.56), customerWithAp,
+                Invoice invoice = paymentService.pay(BigDecimal.valueOf(15.56), customerWithAp,
                                 PaymentMethod.APPLE_PAY);
 
                 assertEquals("should create invoice with correct status", "unpaid", invoice.Status());
