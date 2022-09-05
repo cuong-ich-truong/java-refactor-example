@@ -1,8 +1,13 @@
 # Compiled class file
+target/
 *.class
+
+# Local files
+*.DS_Store
 
 # Log file
 *.log
+paymentLog.txt
 
 # BlueJ files
 *.ctxt
