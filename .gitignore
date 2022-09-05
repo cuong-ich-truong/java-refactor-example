@@ -7,7 +7,7 @@ target/
 
 # Log file
 *.log
-paymentLog.txt
+*paymentLog.txt
 
 # BlueJ files
 *.ctxt
